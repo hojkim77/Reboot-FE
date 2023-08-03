@@ -21,7 +21,6 @@ interface Props {
 const MENU: MenuItem[] = [
   { name: "회사 소개", target: "/" },
   { name: "공지사항", target: "/" },
-  { name: "문의하기", target: "/" },
   { name: "자주 묻는 질문", target: "/" },
 ];
 
@@ -47,12 +46,7 @@ const Header: NextPage<Props> = ({ white, menu, className }) => {
       menu
         ? menu.map((x, i) => (
             <div key={i} className={styles.menu_item}>
-              <Link
-                href={x.target}
-                passHref
-                className={styles.menu_item_text}
-                style={{ color: "black" }}
-              >
+              <Link href={x.target} passHref className={styles.menu_item_text}>
                 {x.name}
               </Link>
             </div>

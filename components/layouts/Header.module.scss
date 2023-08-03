@@ -48,13 +48,19 @@
       font-weight: 700;
       line-height: 24px; /* 150% */
       .menu_item {
-        margin-right: 2.5rem;
+        margin-left: 12px;
+        padding: 8px 20px;
+        border-radius: 8px;
+        &:hover {
+          background-color: #e35d3c;
+        }
+        &:hover .menu_item_text {
+          color: white;
+        }
 
         .menu_item_text {
           text-decoration: none;
-        }
-        &:last-child {
-          margin-right: 0;
+          color: black;
         }
       }
     }
