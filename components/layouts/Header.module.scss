@@ -1,0 +1,113 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80px;
+  background-color: white;
+  box-sizing: content-box;
+  z-index: 20;
+
+  &.show_border {
+    border-bottom: 1px solid #c1c2c3;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      padding-bottom: 0.5rem;
+      font-weight: 300;
+      font-size: 1.4rem;
+      line-height: 1.56rem;
+      color: var(--text-gray);
+    }
+
+    .logo {
+      width: 116px;
+      height: 28px;
+      flex-shrink: 0;
+    }
+
+    .menu_icon {
+      display: none;
+      height: fit-content;
+      cursor: pointer;
+      user-select: none;
+
+      &:hover {
+        filter: brightness(0.7);
+      }
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      font-size: 16;
+      font-weight: 700;
+      line-height: 24px; /* 150% */
+      .menu_item {
+        margin-right: 2.5rem;
+
+        .menu_item_text {
+          text-decoration: none;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .header {
+    height: 6.4rem;
+
+    .content {
+      .menu_icon {
+        display: flex;
+        margin-left: auto;
+      }
+
+      .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        height: 0;
+        padding: 0 2rem;
+        overflow: hidden;
+        background-color: white;
+
+        &.open {
+          height: calc(5.6rem * 4);
+          border-bottom: 1px solid var(--borderline);
+        }
+
+        .menu_item {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 5.6rem;
+          min-height: 5.6rem;
+          margin-right: 0;
+
+          a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+          }
+
+          &:hover {
+            background-color: var(--light);
+          }
+        }
+      }
+    }
+  }
+}

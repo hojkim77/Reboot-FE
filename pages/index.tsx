@@ -1,118 +1,211 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import type { NextPage } from "next";
+import styles from "@styles/Home.module.scss";
+import Container from "@components/layouts/Container";
+import Main from "@/components/layouts/Main";
+import Section from "@/components/layouts/Section";
+import Contents from "@/components/layouts/Contents";
+import SmartStoreBtn from "@/components/buttons/smartStoreButton";
+import Header from "@/components/layouts/Header";
+import { useOnScreen } from "@hooks/responsive";
+import { useEffect, useRef, useState } from "react";
+import FixedBar from "@/components/home/FixedBar";
+const Home: NextPage = ({}) => {
+  const [ScrollY, setScrollY] = useState(0);
+  const currentY = useRef(0); // 스크롤값을 저장하기 위한 상태
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const ctaOnScreen = useOnScreen(ctaRef);
+  const handleFollow = () => {
+    setScrollY(window.pageYOffset); // window 스크롤 값을 ScrollY에 저장
+  };
 
-const inter = Inter({ subsets: ['latin'] })
+  useEffect(() => {
+    console.log("ScrollY is ", ScrollY); // ScrollY가 변화할때마다 값을 콘솔에 출력
+  }, [ScrollY]);
 
-export default function Home() {
+  useEffect(() => {
+    const watch = () => {
+      window.addEventListener("scroll", handleFollow);
+    };
+    watch(); // addEventListener 함수를 실행
+    return () => {
+      window.removeEventListener("scroll", handleFollow); // addEventListener 함수를 삭제
+    };
+  });
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    <Container>
+      <Header></Header>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      <Main className={styles.main}>
+        {/** sectino 1 */}
+        <Section id="1" className={styles.section_1}>
+          <Contents className={styles.content}>
+            <div>
+              <div className={styles.text_main}>
+                새로운 메뉴 개발이 어렵다면,
+                <br />
+                메뉴 선정부터 판매까지
+                <span style={{ color: "#E35D3C" }}>한 번에</span>
+              </div>
+              <div className={styles.text_sub}>
+                개인 매장을 운영중인 사장님이라면
+                <br />
+                쉽고 맛있는 우리 매장만의 메뉴를 판매해보세요
+              </div>
+              <div className={styles.btn_compare} ref={ctaRef}>
+                <SmartStoreBtn text="청년소스몰 바로가기" />
+              </div>
+            </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+            <div className={styles.img_landing_1}>
+              <object
+                data="/images/smartStore.svg"
+                style={{ width: "567px", height: "732px" }}
+              />
+            </div>
+          </Contents>
+        </Section>
+        {/** sectino 2 */}
+        <Section id="2" className={styles.section_2}>
+          <Contents className={styles.content}>
+            <div className={styles.img_landing_2}>
+              <object
+                data="/images/food_1.svg"
+                style={{ width: "inherits", height: "inherits" }}
+              />
+              <object
+                data="/images/food_2.svg"
+                style={{
+                  width: "inherits",
+                  height: "inherits",
+                  marginLeft: "180px",
+                }}
+              />
+            </div>
+            <div>
+              <div className={styles.text_main}>
+                크림떡볶이, 크림파스타, 크림우동
+                <br />
+                <span style={{ color: "#E35D3C" }}>쉽고 다양하게</span>
+                요리가 가능해요
+              </div>
+              <div className={styles.text_sub}>
+                패밀리 레스토랑, 셀프바, 분식집, 포차, 비스트로 등
+                <br />
+                업종별 적합한 메뉴 구성이 가능해요
+              </div>
+            </div>
+          </Contents>
+        </Section>
+        {/** sectino 3 */}
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+        <Section id="1" className={styles.section_1}>
+          <Contents className={styles.content}>
+            <div className={styles.text_main}>
+              새로운 메뉴 개발이 어렵다면,
+              <br />
+              메뉴 선정부터 판매까지
+              <span>한 번에</span>
+            </div>
+            <div className={styles.text_sub}>
+              개인 매장을 운영중인 사장님이라면
+              <br />
+              쉽고 맛있는 우리 매장만의 메뉴를 판매해보세요
+            </div>
+            <div className={styles.btn_compare}>button</div>
+            <div className={styles.img_landing_1}>
+              <object
+                data="/images/smartStore.svg"
+                style={{ width: "inherits", height: "inherits" }}
+              />
+            </div>
+          </Contents>
+        </Section>
+        {/** sectino 4*/}
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
+        <Section id="2" className={styles.section_2}>
+          <Contents className={styles.content}>
+            <div className={styles.img_landing_2}>
+              <object
+                data="/images/food_1.svg"
+                style={{ width: "inherits", height: "inherits" }}
+              />
+            </div>
+            <div className={styles.img_landing_2}>
+              <object
+                data="/images/food_2.svg"
+                style={{ width: "inherits", height: "inherits" }}
+              />
+            </div>
+            <div className={styles.text_main}>
+              크림떡볶이, 크림파스타, 크림우동
+              <br />
+              <span>쉽고 다양하게</span>
+              요리가 가능해요
+            </div>
+            <div className={styles.text_sub}>
+              패밀리 레스토랑, 셀프바, 분식집, 포차, 비스트로 등
+              <br />
+              업종별 적합한 메뉴 구성이 가능해요
+            </div>
+          </Contents>
+        </Section>
+        {/** sectino 5 */}
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
-}
+        <Section id="1" className={styles.section_1}>
+          <Contents className={styles.content}>
+            <div className={styles.text_main}>
+              새로운 메뉴 개발이 어렵다면,
+              <br />
+              메뉴 선정부터 판매까지
+              <span>한 번에</span>
+            </div>
+            <div className={styles.text_sub}>
+              개인 매장을 운영중인 사장님이라면
+              <br />
+              쉽고 맛있는 우리 매장만의 메뉴를 판매해보세요
+            </div>
+            <div className={styles.btn_compare}>button</div>
+            <div className={styles.img_landing_1}>
+              <object
+                data="/images/smartStore.svg"
+                style={{ width: "inherits", height: "inherits" }}
+              />
+            </div>
+          </Contents>
+        </Section>
+        {/** sectino 6 */}
+
+        <Section id="2" className={styles.section_2}>
+          <Contents className={styles.content}>
+            <div className={styles.img_landing_2}>
+              <object
+                data="/images/food_1.svg"
+                style={{ width: "inherits", height: "inherits" }}
+              />
+            </div>
+            <div className={styles.img_landing_2}>
+              <object
+                data="/images/food_2.svg"
+                style={{ width: "inherits", height: "inherits" }}
+              />
+            </div>
+            <div className={styles.text_main}>
+              크림떡볶이, 크림파스타, 크림우동
+              <br />
+              <span>쉽고 다양하게</span>
+              요리가 가능해요
+            </div>
+            <div className={styles.text_sub}>
+              패밀리 레스토랑, 셀프바, 분식집, 포차, 비스트로 등
+              <br />
+              업종별 적합한 메뉴 구성이 가능해요
+            </div>
+          </Contents>
+        </Section>
+        <FixedBar trigger={ctaOnScreen === false} />
+      </Main>
+    </Container>
+  );
+};
+
+export default Home;

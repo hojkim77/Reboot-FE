@@ -1,0 +1,87 @@
+.text_main {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: normal;
+}
+
+.text_sub {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 2.3rem;
+}
+
+.text_tiny {
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.4rem;
+  color: var(--text-tiny);
+}
+
+.text_highlight {
+  color: var(--primary);
+}
+.main {
+  margin-top: 80px;
+}
+.section_1 {
+  height: 620px;
+  //? for test
+  //border: 1px solid black;
+  .content {
+    padding: 79px 0 0 0;
+    justify-content: space-between;
+    .img_landing_1 {
+      grid-row: 1 / 4;
+      width: 567px;
+      height: 732px;
+      //?  section2에 가려져야함.
+      z-index: -1;
+    }
+
+    .text_main {
+      text-align: left;
+      margin-top: 80px;
+      margin-bottom: 4.6rem;
+    }
+
+    .text_sub {
+      text-align: left;
+    }
+
+    .btn_compare {
+      text-align: left;
+      margin-top: 4.4rem;
+      margin-bottom: auto;
+      z-index: 1;
+    }
+  }
+}
+
+.section_2 {
+  height: 620px;
+  background-color: #f9f9f9;
+
+  .content {
+    z-index: 1;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+
+    .text_main {
+      align-self: end;
+      text-align: right;
+      margin-top: 200px;
+      margin-bottom: 60px;
+    }
+
+    .text_sub {
+      align-self: end;
+      text-align: right;
+    }
+  }
+
+  .img_landing_2 {
+    //? 오른쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
+    width: min-content;
+    margin-top: 160px;
+  }
+}
