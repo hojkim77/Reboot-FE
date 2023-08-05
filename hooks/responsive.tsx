@@ -12,23 +12,25 @@ export const useMobileMediaQuery = () =>
   useMediaQuery({ query: "(max-width: 767px)" });
 
 export const useOnScreen = (ref: RefObject<Element>) => {
-  const [isIntersecting, setIntersecting] = useState<boolean | null>(null);
+  const [intersecting, setIntersecting] = useState<boolean | null>(null);
   // if (serverSide) {
   //   return false;
   // }
 
+  //? 관할하는 도구
   const observer = useMemo(
     () =>
       serverSide
         ? null
         : new IntersectionObserver(([entry]) =>
-            setIntersecting(entry.isIntersecting),
+            setIntersecting(entry.isIntersecting)
           ),
-    [],
+    []
   );
 
   useEffect(() => {
     if (ref.current) {
+      //* 관찰하는 도구로 ref.current를 보겠다.
       observer?.observe(ref.current);
     }
 
@@ -37,5 +39,5 @@ export const useOnScreen = (ref: RefObject<Element>) => {
     };
   });
 
-  return isIntersecting;
+  return intersecting;
 };
