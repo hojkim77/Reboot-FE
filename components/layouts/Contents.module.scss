@@ -1,7 +1,6 @@
 .contents {
   display: flex;
-  grid-template-columns: auto;
+  justify-content: space-between;
   width: 100%;
   max-width: 1080px;
-  margin: 0 2rem;
 }

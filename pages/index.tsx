@@ -10,10 +10,13 @@ import { useOnScreen } from "@hooks/responsive";
 import { useEffect, useRef, useState } from "react";
 import FixedBar from "@/components/home/FixedBar";
 const Home: NextPage = ({}) => {
-  const [ScrollY, setScrollY] = useState(0);
-  const currentY = useRef(0); // 스크롤값을 저장하기 위한 상태
   const ctaRef = useRef<HTMLDivElement>(null);
   const ctaOnScreen = useOnScreen(ctaRef);
+  {
+    /**
+     * //? scroll 관련 testCode
+     * const [ScrollY, setScrollY] = useState(0);
+  const currentY = useRef(0); // 스크롤값을 저장하기 위한 상태
   const handleFollow = () => {
     setScrollY(window.pageYOffset); // window 스크롤 값을 ScrollY에 저장
   };
@@ -31,6 +34,9 @@ const Home: NextPage = ({}) => {
       window.removeEventListener("scroll", handleFollow); // addEventListener 함수를 삭제
     };
   });
+ */
+  }
+
   return (
     <Container>
       <Header></Header>
@@ -39,7 +45,7 @@ const Home: NextPage = ({}) => {
         {/** sectino 1 */}
         <Section id="1" className={styles.section_1}>
           <Contents className={styles.content}>
-            <div>
+            <div className={styles.text_container}>
               <div className={styles.text_main}>
                 새로운 메뉴 개발이 어렵다면,
                 <br />
@@ -57,10 +63,7 @@ const Home: NextPage = ({}) => {
             </div>
 
             <div className={styles.img_landing_1}>
-              <object
-                data="/images/smartStore.svg"
-                style={{ width: "567px", height: "732px" }}
-              />
+              <object data="/images/smartStore.svg" />
             </div>
           </Contents>
         </Section>
@@ -98,24 +101,25 @@ const Home: NextPage = ({}) => {
         </Section>
         {/** sectino 3 */}
 
-        <Section id="1" className={styles.section_1}>
+        <Section id="3" className={styles.section_3}>
           <Contents className={styles.content}>
-            <div className={styles.text_main}>
-              새로운 메뉴 개발이 어렵다면,
-              <br />
-              메뉴 선정부터 판매까지
-              <span>한 번에</span>
+            <div>
+              <div className={styles.text_main}>
+                청년소스를 이용하면
+                <br />
+                <span>빠른 조리</span>가 가능해요
+              </div>
+              <div className={styles.text_sub}>
+                불필요한 금액을 줄여 비용을 낮추는
+                <br />
+                가장 합리적인 제작 방법을만나보세요!
+              </div>
             </div>
-            <div className={styles.text_sub}>
-              개인 매장을 운영중인 사장님이라면
-              <br />
-              쉽고 맛있는 우리 매장만의 메뉴를 판매해보세요
-            </div>
-            <div className={styles.btn_compare}>button</div>
+
             <div className={styles.img_landing_1}>
               <object
                 data="/images/smartStore.svg"
-                style={{ width: "inherits", height: "inherits" }}
+                style={{ width: "359px", height: "359px" }}
               />
             </div>
           </Contents>
