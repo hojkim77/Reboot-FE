@@ -107,7 +107,7 @@ const Home: NextPage = ({}) => {
               <div className={styles.text_main}>
                 청년소스를 이용하면
                 <br />
-                <span>빠른 조리</span>가 가능해요
+                <span style={{ color: "#E35D3C" }}>빠른 조리</span>가 가능해요
               </div>
               <div className={styles.text_sub}>
                 불필요한 금액을 줄여 비용을 낮추는
@@ -116,7 +116,7 @@ const Home: NextPage = ({}) => {
               </div>
             </div>
 
-            <div className={styles.img_landing_1}>
+            <div className={styles.img_landing_3}>
               <object
                 data="/images/smartStore.svg"
                 style={{ width: "359px", height: "359px" }}
@@ -126,53 +126,52 @@ const Home: NextPage = ({}) => {
         </Section>
         {/** sectino 4*/}
 
-        <Section id="2" className={styles.section_2}>
+        <Section id="4" className={styles.section_4}>
           <Contents className={styles.content}>
-            <div className={styles.img_landing_2}>
+            <div className={styles.img_landing_4}>
               <object
-                data="/images/food_1.svg"
-                style={{ width: "inherits", height: "inherits" }}
+                data="/images/scale.svg"
+                style={{ width: "507px", height: "332px" }}
               />
             </div>
-            <div className={styles.img_landing_2}>
-              <object
-                data="/images/food_2.svg"
-                style={{ width: "inherits", height: "inherits" }}
-              />
-            </div>
-            <div className={styles.text_main}>
-              크림떡볶이, 크림파스타, 크림우동
-              <br />
-              <span>쉽고 다양하게</span>
-              요리가 가능해요
-            </div>
-            <div className={styles.text_sub}>
-              패밀리 레스토랑, 셀프바, 분식집, 포차, 비스트로 등
-              <br />
-              업종별 적합한 메뉴 구성이 가능해요
+
+            <div>
+              <div className={styles.text_main}>
+                여러 과정 없이
+                <span style={{ color: "#E35D3C" }}>원스톱 방식</span>
+                으로
+                <br />
+                간편한 조리가 가능해요
+              </div>
+              <div className={styles.text_sub}>
+                계속해서 달라지는 맛 때문에 고민이신가요?
+                <br />
+                여러 재료가 한 번에 섞여있어 사용이 편리해요
+              </div>
             </div>
           </Contents>
         </Section>
         {/** sectino 5 */}
-
-        <Section id="1" className={styles.section_1}>
+        <Section id="5" className={styles.section_5}>
           <Contents className={styles.content}>
-            <div className={styles.text_main}>
-              새로운 메뉴 개발이 어렵다면,
-              <br />
-              메뉴 선정부터 판매까지
-              <span>한 번에</span>
+            <div>
+              <div className={styles.text_main}>
+                1인용부터 단체 음식까지
+                <br />
+                <span style={{ color: "#E35D3C" }}>인원수에 맞게</span> 양
+                조절이 가능해요
+              </div>
+              <div className={styles.text_sub}>
+                밀키트처럼 정량화 된 기준이 아니기 때문에
+                <br />
+                상권에 맞는 메뉴로 맞춤형 제작이 가능해요!
+              </div>
             </div>
-            <div className={styles.text_sub}>
-              개인 매장을 운영중인 사장님이라면
-              <br />
-              쉽고 맛있는 우리 매장만의 메뉴를 판매해보세요
-            </div>
-            <div className={styles.btn_compare}>button</div>
-            <div className={styles.img_landing_1}>
+
+            <div className={styles.img_landing_5}>
               <object
-                data="/images/smartStore.svg"
-                style={{ width: "inherits", height: "inherits" }}
+                data="/images/beaker.svg"
+                style={{ width: "433px", height: "369px" }}
               />
             </div>
           </Contents>
