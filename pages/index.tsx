@@ -6,6 +6,7 @@ import Section from "@/components/layouts/Section";
 import Contents from "@/components/layouts/Contents";
 import SmartStoreBtn from "@/components/buttons/smartStoreButton";
 import Header from "@/components/layouts/Header";
+import ReviewSlider from "@/components/home/ReviewSlider";
 import { useOnScreen } from "@hooks/responsive";
 import { useEffect, useRef, useState } from "react";
 import FixedBar from "@/components/home/FixedBar";
@@ -178,34 +179,11 @@ const Home: NextPage = ({}) => {
         </Section>
         {/** sectino 6 */}
 
-        <Section id="2" className={styles.section_2}>
+        <Section id="6" className={styles.section_6}>
           <Contents className={styles.content}>
-            <div className={styles.img_landing_2}>
-              <object
-                data="/images/food_1.svg"
-                style={{ width: "inherits", height: "inherits" }}
-              />
-            </div>
-            <div className={styles.img_landing_2}>
-              <object
-                data="/images/food_2.svg"
-                style={{ width: "inherits", height: "inherits" }}
-              />
-            </div>
-            <div className={styles.text_main}>
-              크림떡볶이, 크림파스타, 크림우동
-              <br />
-              <span>쉽고 다양하게</span>
-              요리가 가능해요
-            </div>
-            <div className={styles.text_sub}>
-              패밀리 레스토랑, 셀프바, 분식집, 포차, 비스트로 등
-              <br />
-              업종별 적합한 메뉴 구성이 가능해요
-            </div>
+            <ReviewSlider></ReviewSlider>
           </Contents>
         </Section>
-        <FixedBar trigger={ctaOnScreen === false} />
       </Main>
     </Container>
   );
