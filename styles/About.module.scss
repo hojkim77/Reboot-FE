@@ -1,0 +1,164 @@
+.section_1 {
+  align-items: center;
+  margin-top: 80px;
+  .content {
+    height: 644px;
+    color: white;
+    flex-direction: column;
+    justify-content: start;
+    .text_main {
+      margin-top: 137px;
+      margin-bottom: 66px;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 4.7rem;
+    }
+
+    .text_sub {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 2.6rem;
+    }
+
+    .text_tiny {
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.4rem;
+      color: var(--text-tiny);
+    }
+  }
+}
+
+.section_2 {
+  .content {
+    flex-direction: column;
+
+    .text_main {
+      text-align: center;
+      font-weight: 700;
+      font-size: 30px;
+      margin-top: 150px;
+      line-height: 3.9rem;
+    }
+    .statistics {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 4rem;
+      margin-top: 10.5rem;
+
+      .item {
+        text-align: center;
+        min-width: 15rem;
+
+        .item_name {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 2.6rem;
+        }
+
+        .item_value {
+          margin-top: 2rem;
+          font-weight: 700;
+          font-size: 30px;
+          line-height: 3.9rem;
+          color: #e35d3c;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .text_tiny {
+      text-align: right;
+      margin-top: 1.5rem;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.8rem;
+      color: #a5a5a5;
+    }
+  }
+}
+
+.section_3 {
+  align-items: center;
+  background-color: var(--light);
+
+  .content {
+    padding: 15rem 0;
+    color: var(--text-darkgray);
+
+    .text_main {
+      font-weight: 700;
+      font-size: 3rem;
+      line-height: 3.9rem;
+    }
+
+    .article_list {
+      margin-top: 6.5rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section_1 {
+    height: 52rem;
+
+    .content {
+      padding-top: 4rem;
+
+      .text_main {
+        margin-bottom: 4rem;
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
+
+      .text_sub {
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+      }
+    }
+  }
+
+  .section_2 {
+    .content {
+      padding: 8rem 0 7rem 0;
+
+      .text_main {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
+
+      .statistics {
+        flex-direction: column;
+        margin-top: 3.5rem;
+
+        .item {
+          margin-right: 0;
+          margin-bottom: 3rem;
+
+          .item_value {
+            margin-top: 1rem;
+            font-size: 2.6rem;
+            line-height: 3.4rem;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .section_3 {
+    .content {
+      .text_main {
+        text-align: center;
+      }
+    }
+  }
+}

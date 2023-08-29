@@ -1,7 +1,8 @@
 import type { NextPage } from "next";
 import classNames from "classnames";
 import styles from "./Contents.module.scss";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
+import { Style } from "util";
 
 interface Props {
   className?: string;

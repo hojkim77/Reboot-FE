@@ -19,7 +19,7 @@ interface Props {
 }
 
 const MENU: MenuItem[] = [
-  { name: "회사 소개", target: "/" },
+  { name: "회사 소개", target: "/about" },
   { name: "공지사항", target: "/notices" },
   { name: "자주 묻는 질문", target: "/" },
 ];
