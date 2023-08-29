@@ -1,0 +1,36 @@
+.section_1 {
+  .content {
+    padding: 160px 74px;
+    font-weight: 700;
+    display: inline-block;
+    .text_main {
+      font-size: 36px;
+      line-height: 130%;
+      text-decoration: none;
+      color: black;
+    }
+
+    .notice_list {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section_1 {
+    .content {
+      padding-top: 11.5rem;
+      padding-bottom: 8rem;
+
+      .text_main {
+        font-weight: 700;
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+      }
+
+      .notice_list {
+        margin-top: 3rem;
+      }
+    }
+  }
+}

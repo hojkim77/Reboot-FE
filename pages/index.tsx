@@ -184,6 +184,7 @@ const Home: NextPage = ({}) => {
             <ReviewSlider></ReviewSlider>
           </Contents>
         </Section>
+        <FixedBar trigger={ctaOnScreen === false}></FixedBar>
       </Main>
     </Container>
   );

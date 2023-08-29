@@ -1,0 +1,46 @@
+.notice_list {
+  .item {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+    width: 100%;
+    height: 75px;
+    border-bottom: 1px solid #c4c4c4;
+
+    .title {
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      color: var(--text-darkgray);
+      text-decoration: none;
+      color: black;
+      margin-bottom: 4px;
+    }
+
+    .date {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 18px;
+      color: #a5a5a5;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .notice_list {
+    .item {
+      .title {
+        font-size: 1.6rem;
+        line-height: 2rem;
+      }
+
+      .date {
+        bottom: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+      }
+    }
+  }
+}
