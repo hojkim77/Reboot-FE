@@ -15,6 +15,7 @@ import Header from "@components/layouts/Header";
 import { useOnScreen } from "@hooks/responsive";
 //import { Dict } from "@utils/data";
 import dayjs from "dayjs";
+import Footer from "@/components/layouts/Footer";
 
 export interface Dict {
   [key: string]: any;
@@ -89,6 +90,7 @@ const About: NextPage = () => {
           </Contents>
         </Section>
       </Main>
+      <Footer />
     </Container>
   );
 };

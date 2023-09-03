@@ -10,6 +10,7 @@ import Contents from "@components/layouts/Contents";
 import Header from "@components/layouts/Header";
 import NoticeList from "@components/notices/NoticeList";
 import _notices from "data/notice.json";
+import Footer from "@/components/layouts/Footer";
 const Notices: NextPage = () => {
   //const [showOverlay, hideOverlay] = useOverlay();
   //const { data, error } = useSWR("/service/get_notice_list", fetcher);
@@ -46,6 +47,7 @@ const Notices: NextPage = () => {
           </Contents>
         </Section>
       </Main>
+      <Footer />
     </Container>
   );
 };
