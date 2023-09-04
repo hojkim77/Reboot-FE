@@ -100,7 +100,16 @@
   }
 
   .img_landing_3 {
-    margin-top: 160px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 55px;
+    .text {
+      margin-top: 20px;
+      text-align: center;
+      color: #e35d3c;
+      font-size: 32px;
+      font-weight: 600;
+    }
   }
 }
 .section_4 {

@@ -96,9 +96,10 @@ const Home: NextPage = ({}) => {
 
             <div className={styles.img_landing_3}>
               <object
-                data="/images/smartStore.svg"
+                data="/images/stopwatch.svg"
                 style={{ width: "359px", height: "359px" }}
               />
+              <span className={styles.text}>35% 조리시간 단축</span>
             </div>
           </Contents>
         </Section>
