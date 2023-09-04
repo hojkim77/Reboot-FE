@@ -8,6 +8,7 @@ interface NoticeItem {
   id: number;
   title: string;
   created_datetime: string;
+  content: string;
 }
 
 interface ItemProps {
@@ -20,7 +21,15 @@ const Item: NextPage<ItemProps> = ({ data }) => {
       <Link
         href={{
           pathname: data.id ? "/notices/[id]" : "/notices",
-          query: { id: data.id },
+          query: {
+            id: data.id,
+            title: data.title,
+            created_datetime: dayjs(
+              //? 아직 data가 없기 때문에 new Date()로 넣어둠.
+              data.created_datetime ? data.created_datetime : new Date()
+            ).format("YYYY-MM-DD"),
+            content: data.content,
+          },
         }}
         passHref
         className={styles.title}
