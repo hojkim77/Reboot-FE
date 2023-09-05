@@ -20,24 +20,21 @@
   height: 100%;
   object-fit: cover;
 }
-.swiper-pagination {
+.swiperpagination {
   position: absolute;
-  top: 50%;
-  left: 5%;
-  transform: translateY(-50%);
+  top: -100px;
+  display: flex;
+  justify-content: center;
 }
-.swiper-pagination-bullet {
-  width: 20px;
-  height: 20px;
-  text-align: center;
-  line-height: 20px;
-  font-size: 12px;
-  color: "red";
+.swiperpaginationbullet {
+  width: 15px;
+  height: 15px;
+  margin: 0 12.5px 120px 12.5px;
+  background-color: #e0e0e0;
+  border-radius: 15px;
   opacity: 1;
-  background: rgba(0, 0, 0, 0.2);
 }
 
-.swiper-pagination-bullet-active {
-  color: #fff;
-  background: "red";
+.swiperpaginationbulletactive {
+  background-color: #e35d3c;
 }
