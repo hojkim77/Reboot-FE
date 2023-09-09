@@ -14,7 +14,7 @@ const SmartStoreBtn: NextPage<Props> = ({ className, text, ...otherProps }) => {
   return (
     <>
       <div className={newClassName} {...otherProps}>
-        <a href="/">{text}</a>
+        <Link href={"/"}>{text}</Link>
         <object data="/images/arrow_right_large.svg" />
       </div>
     </>

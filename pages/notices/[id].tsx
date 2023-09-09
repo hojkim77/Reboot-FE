@@ -37,14 +37,17 @@ const Notices: NextPage = () => {
             <div className={styles.title}>{title}</div>
             <div className={styles.date}>{created_datetime}</div>
             <div className={styles.text_content}>
-              {content?.split("\n").map((line) => {
+              {
+                /*content?.split("\n").map((line) => {
                 return (
                   <>
                     {line}
                     <br />
                   </>
                 );
-              })}
+              })*/
+                content
+              }
             </div>
           </Contents>
         </Section>
