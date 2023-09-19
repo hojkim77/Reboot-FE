@@ -76,12 +76,11 @@ const Header: NextPage<Props> = ({ white, menu, className }) => {
 
         <div className={styles.menu_icon} onClick={menuToggle}>
           {menuOpen ? (
-            <Image src="/images/close.svg" alt="menu" width={20} height={20} />
+            <Image src="/images/menu.svg" alt="menu" width={24} height={24} />
           ) : (
-            <Image src="/images/menu.svg" alt="menu" width={20} height={20} />
+            <Image src="/images/menu.svg" alt="menu" width={24} height={24} />
           )}
         </div>
-
         <div className={classNames(styles.menu, { [styles.open]: menuOpen })}>
           {menuItems}
         </div>
