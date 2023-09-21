@@ -70,8 +70,14 @@ const Header: NextPage<Props> = ({ white, menu, className }) => {
   return (
     <Section id="header" className={newClassName}>
       <Contents className={styles.content}>
-        <Link href="/" passHref className={styles.logo}>
-          <Image src="/images/logo.svg" alt="logo" width={116} height={28} />
+        <Link href="/" passHref>
+          <Image
+            src="/images/logo.svg"
+            alt="logo"
+            className={styles.logo}
+            width={0} // default
+            height={0} // default
+          />
         </Link>
 
         <div className={styles.menu_icon} onClick={menuToggle}>

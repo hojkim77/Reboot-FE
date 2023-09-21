@@ -164,3 +164,175 @@
     background-color: #f9f9f9;
   }
 }
+
+@media (max-width: 767px) {
+  .text_main {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .text_sub {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: normal;
+  }
+
+  .text_tiny {
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    color: var(--text-tiny);
+  }
+
+  .main {
+    margin-top: 72px;
+  }
+  .section_1 {
+    height: 500px;
+    //? for test
+    //border: 1px solid black;
+    .content {
+      flex-direction: column;
+      .text_container {
+        align-self: baseline;
+        margin-top: 20px;
+        margin-left: 24px;
+        .text_main {
+          text-align: left;
+          margin-bottom: 24px;
+        }
+
+        .text_sub {
+          text-align: left;
+          margin-bottom: 40px;
+        }
+
+        .btn_compare {
+          position: absolute;
+          text-align: left;
+          margin-top: 0px;
+          margin-bottom: auto;
+          z-index: 1;
+        }
+      }
+
+      .img_landing_1 {
+        align-self: center;
+        padding-top: 0px;
+        margin-right: 0px;
+        //?  section2에 가려져야함.
+        z-index: -1;
+      }
+    }
+  }
+
+  .section_2 {
+    height: 620px;
+    background-color: #f9f9f9;
+
+    .content {
+      z-index: 1;
+      background-color: #f9f9f9;
+      .text_main {
+        align-self: end;
+        text-align: right;
+        margin-top: 200px;
+        margin-bottom: 60px;
+      }
+
+      .text_sub {
+        align-self: end;
+        text-align: right;
+      }
+    }
+
+    .img_landing_2 {
+      //? 오른쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
+      width: min-content;
+      margin-top: 160px;
+    }
+  }
+  .section_3 {
+    height: 620px;
+
+    .content {
+      padding: 79px 0 0 0;
+
+      .text_main {
+        text-align: left;
+        margin-top: 120px;
+        margin-bottom: 4.6rem;
+      }
+
+      .text_sub {
+        text-align: left;
+      }
+    }
+
+    .img_landing_3 {
+      display: flex;
+      flex-direction: column;
+      margin-top: 55px;
+      .text {
+        margin-top: 20px;
+        text-align: center;
+        color: #e35d3c;
+        font-size: 32px;
+        font-weight: 600;
+      }
+    }
+  }
+  .section_4 {
+    height: 620px;
+    background-color: #f9f9f9;
+
+    .content {
+      background-color: #f9f9f9;
+      .text_main {
+        align-self: end;
+        text-align: right;
+        margin-top: 200px;
+        margin-bottom: 60px;
+      }
+
+      .text_sub {
+        align-self: end;
+        text-align: right;
+      }
+    }
+
+    .img_landing_4 {
+      margin-top: 144px;
+    }
+  }
+
+  .section_5 {
+    height: 620px;
+
+    .content {
+      .text_main {
+        text-align: left;
+        margin-top: 200px;
+        margin-bottom: 60px;
+      }
+
+      .text_sub {
+        text-align: left;
+      }
+    }
+
+    .img_landing_5 {
+      //? 왼쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
+      width: min-content;
+      align-self: center;
+    }
+  }
+  .section_6 {
+    height: 620px;
+    background-color: #f9f9f9;
+    .content {
+      background-color: #f9f9f9;
+    }
+  }
+}

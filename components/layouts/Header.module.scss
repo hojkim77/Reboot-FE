@@ -15,7 +15,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
+    .logo {
+      width: 116px;
+      height: 28px;
+    }
     .info {
       padding-bottom: 0.5rem;
       font-weight: 300;
@@ -63,10 +66,14 @@
 
 @media (max-width: 767px) {
   .header {
-    height: 6.4rem;
+    height: 72px;
 
     .content {
       padding: 0 24px 0 24px;
+      .logo {
+        width: 98px;
+        height: 23px;
+      }
       .menu_icon {
         display: flex;
         margin-left: auto;

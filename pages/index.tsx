@@ -25,15 +25,15 @@ const Home: NextPage = ({}) => {
           <Contents className={styles.content}>
             <div className={styles.text_container}>
               <div className={styles.text_main}>
-                새로운 메뉴 개발이 어렵다면,
+                음식 레시피 잡기가 힘들다면,
                 <br />
-                메뉴 선정부터 판매까지
-                <span style={{ color: "#E35D3C" }}>한 번에</span>
+                청년소스에서 쉽고 빠르고
+                <span style={{ color: "#E35D3C" }}> 한 번에</span>
               </div>
               <div className={styles.text_sub}>
-                개인 매장을 운영중인 사장님이라면
+                매장 운영 또는 행사, 모임을 계획중이라면
                 <br />
-                쉽고 맛있는 우리 매장만의 메뉴를 판매해보세요
+                쉽고 맛있는 레시피로 조리해보세요!
               </div>
               <div className={styles.btn_compare} ref={ctaRef}>
                 <SmartStoreBtn text="청년소스몰 바로가기" />
