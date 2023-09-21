@@ -6,8 +6,11 @@ function RebootAPP({ Component, pageProps }: AppProps) {
       <Component {...pageProps} />
       <style jsx global>
         {`
+          html,
           body {
             margin: 0;
+            width: 100%;
+            overflow-x: hidden;
           }
         `}
       </style>
