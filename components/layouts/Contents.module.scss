@@ -4,3 +4,9 @@
   width: 100%;
   max-width: 1080px;
 }
+@media (max-width: 767px) {
+  .contents {
+    justify-content: start;
+    max-width: 343px;
+  }
+}

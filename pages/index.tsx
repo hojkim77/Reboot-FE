@@ -41,27 +41,16 @@ const Home: NextPage = ({}) => {
             </div>
 
             <div className={styles.img_landing_1}>
-              <object data="/images/smartStore.svg" />
+              <object
+                data="/images/smartStore.svg"
+                className={styles.img_item}
+              />
             </div>
           </Contents>
         </Section>
         {/** sectino 2 */}
         <Section id="2" className={styles.section_2}>
           <Contents className={styles.content}>
-            <div className={styles.img_landing_2}>
-              <object
-                data="/images/food_1.svg"
-                style={{ width: "inherits", height: "inherits" }}
-              />
-              <object
-                data="/images/food_2.svg"
-                style={{
-                  width: "inherits",
-                  height: "inherits",
-                  marginLeft: "180px",
-                }}
-              />
-            </div>
             <div>
               <div className={styles.text_main}>
                 크림떡볶이, 크림파스타, 크림우동
@@ -74,6 +63,9 @@ const Home: NextPage = ({}) => {
                 <br />
                 업종별 적합한 메뉴 구성이 가능해요
               </div>
+            </div>
+            <div className={styles.img_landing_2}>
+              <object data="/images/foods.svg" className={styles.img_item} />
             </div>
           </Contents>
         </Section>
@@ -108,10 +100,7 @@ const Home: NextPage = ({}) => {
         <Section id="4" className={styles.section_4}>
           <Contents className={styles.content}>
             <div className={styles.img_landing_4}>
-              <object
-                data="/images/scale.svg"
-                style={{ width: "507px", height: "332px" }}
-              />
+              <object data="/images/scale.svg" className={styles.item} />
             </div>
 
             <div>

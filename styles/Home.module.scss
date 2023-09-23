@@ -52,6 +52,10 @@
       margin-right: 115px;
       //?  section2에 가려져야함.
       z-index: -1;
+      .img_item {
+        width: inherit;
+        height: inherit;
+      }
     }
   }
 }
@@ -194,10 +198,11 @@
     //border: 1px solid black;
     .content {
       flex-direction: column;
+      position: relative;
       .text_container {
         align-self: baseline;
         margin-top: 20px;
-        margin-left: 24px;
+        margin-left: 8px;
         .text_main {
           text-align: left;
           margin-bottom: 24px;
@@ -209,6 +214,9 @@
         }
 
         .btn_compare {
+          width: 297;
+          height: 52;
+          bottom: 40px;
           position: absolute;
           text-align: left;
           margin-top: 0px;
@@ -223,34 +231,45 @@
         margin-right: 0px;
         //?  section2에 가려져야함.
         z-index: -1;
+        .img_item {
+          width: 195px;
+          height: inherit;
+        }
       }
     }
   }
 
   .section_2 {
-    height: 620px;
+    height: 500px;
     background-color: #f9f9f9;
 
     .content {
       z-index: 1;
       background-color: #f9f9f9;
+      flex-direction: column;
       .text_main {
-        align-self: end;
-        text-align: right;
-        margin-top: 200px;
-        margin-bottom: 60px;
+        align-self: flex-start;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        margin-left: 8px;
       }
 
       .text_sub {
-        align-self: end;
-        text-align: right;
+        align-self: flex-start;
+        text-align: left;
+        margin-left: 8px;
       }
     }
 
     .img_landing_2 {
       //? 오른쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
-      width: min-content;
-      margin-top: 160px;
+      align-self: center;
+      margin-top: 72px;
+      .img_item {
+        width: 270px;
+        height: 218px;
+      }
     }
   }
   .section_3 {
@@ -258,6 +277,7 @@
 
     .content {
       padding: 79px 0 0 0;
+      flex-direction: column;
 
       .text_main {
         text-align: left;
@@ -288,6 +308,7 @@
     background-color: #f9f9f9;
 
     .content {
+      flex-direction: column;
       background-color: #f9f9f9;
       .text_main {
         align-self: end;
@@ -304,6 +325,10 @@
 
     .img_landing_4 {
       margin-top: 144px;
+      .item {
+        width: 320px;
+        height: 209px;
+      }
     }
   }
 
@@ -311,6 +336,8 @@
     height: 620px;
 
     .content {
+      flex-direction: column;
+
       .text_main {
         text-align: left;
         margin-top: 200px;
