@@ -12,6 +12,7 @@ interface Props {
 }
 
 const FixedBar: NextPage<Props> = ({ className, trigger, ...otherProps }) => {
+  console.log(trigger);
   const newClassName = classNames(
     styles.fixed_bar,
     { [styles.active]: trigger },
