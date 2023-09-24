@@ -25,22 +25,20 @@ const ReviewSlider: NextPage = ({}) => {
   //? slide contents
   const items = () => {
     return (
-      <div style={{ textAlign: "center", marginTop: "160px" }}>
-        <div
-          style={{ fontSize: "40px", marginBottom: "60px", fontWeight: "bold" }}
-        >
+      <div className={styles.text_container}>
+        <div className={styles.main_text}>
           {"바쁜시간대에 조리가 너무 편해졌어요"}
         </div>
-        <div style={{ fontSize: "20px", marginBottom: "40px" }}>
+        <div className={styles.sub_text}>
           퇴근 시간대에는 손님들이 한 번에 너무 몰려서 주방이 전체적으로
           막혔는데,
           <br />
           정해진 양을 한 번만 넣으면 되니
-          <span style={{ fontSize: "20px", fontWeight: "700" }}>
-            직원들이 편하게 일하는게 느껴지네요.
+          <span className={styles.highlight}>
+            {" 직원들이 편하게 일하는게 느껴지네요."}
           </span>
         </div>
-        <div style={{ fontSize: "20px" }}>김**님 (분식집 자영업)</div>
+        <div className={styles.sub_text}>김**님 (분식집 자영업)</div>
       </div>
     );
   };

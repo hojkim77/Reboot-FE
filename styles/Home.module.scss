@@ -82,8 +82,12 @@
 
   .img_landing_2 {
     //? 오른쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
+    .img_item {
+      width: 537px;
+      height: 434px;
+    }
     width: min-content;
-    margin-top: 160px;
+    align-self: center;
   }
 }
 .section_3 {
@@ -107,6 +111,10 @@
     display: flex;
     flex-direction: column;
     margin-top: 55px;
+    .img_item {
+      width: 359px;
+      height: 359px;
+    }
     .text {
       margin-top: 20px;
       text-align: center;
@@ -157,7 +165,10 @@
 
   .img_landing_5 {
     //? 왼쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
-    width: min-content;
+    .img_item {
+      width: 433px;
+      height: 369px;
+    }
     align-self: center;
   }
 }
@@ -246,7 +257,7 @@
     .content {
       z-index: 1;
       background-color: #f9f9f9;
-      flex-direction: column;
+      flex-direction: column-reverse;
       .text_main {
         align-self: flex-start;
         text-align: left;
@@ -273,59 +284,70 @@
     }
   }
   .section_3 {
-    height: 620px;
+    height: 500px;
 
     .content {
-      padding: 79px 0 0 0;
+      padding: 0;
       flex-direction: column;
 
       .text_main {
+        align-self: flex-start;
         text-align: left;
-        margin-top: 120px;
-        margin-bottom: 4.6rem;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        margin-left: 8px;
       }
 
       .text_sub {
+        align-self: flex-start;
         text-align: left;
+        margin-left: 8px;
       }
     }
 
     .img_landing_3 {
       display: flex;
       flex-direction: column;
-      margin-top: 55px;
+      margin-top: 80px;
+      .img_item {
+        align-self: center;
+        width: 143px;
+        height: 143px;
+      }
       .text {
         margin-top: 20px;
         text-align: center;
         color: #e35d3c;
-        font-size: 32px;
+        font-size: 16px;
         font-weight: 600;
       }
     }
   }
   .section_4 {
-    height: 620px;
+    height: 500px;
     background-color: #f9f9f9;
 
     .content {
-      flex-direction: column;
+      flex-direction: column-reverse;
       background-color: #f9f9f9;
       .text_main {
-        align-self: end;
-        text-align: right;
-        margin-top: 200px;
-        margin-bottom: 60px;
+        align-self: flex-start;
+        text-align: left;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        margin-left: 8px;
       }
 
       .text_sub {
-        align-self: end;
-        text-align: right;
+        align-self: flex-start;
+        text-align: left;
+        margin-left: 8px;
       }
     }
 
     .img_landing_4 {
-      margin-top: 144px;
-      .item {
+      margin-top: 60px;
+      .img_item {
         width: 320px;
         height: 209px;
       }
@@ -333,30 +355,38 @@
   }
 
   .section_5 {
-    height: 620px;
+    height: 500px;
 
     .content {
       flex-direction: column;
 
       .text_main {
+        align-self: flex-start;
         text-align: left;
-        margin-top: 200px;
-        margin-bottom: 60px;
+        margin-top: 40px;
+        margin-bottom: 24px;
+        margin-left: 8px;
       }
 
       .text_sub {
+        align-self: flex-start;
         text-align: left;
+        margin-left: 8px;
       }
     }
 
     .img_landing_5 {
       //? 왼쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
-      width: min-content;
+      .img_item {
+        width: 273px;
+        height: 235px;
+      }
+      margin-top: 60px;
       align-self: center;
     }
   }
   .section_6 {
-    height: 620px;
+    height: 500px;
     background-color: #f9f9f9;
     .content {
       background-color: #f9f9f9;
