@@ -103,51 +103,64 @@
 
 @media (max-width: 767px) {
   .section_1 {
-    height: 52rem;
-
+    margin-top: 72px;
     .content {
-      padding-top: 4rem;
+      height: 350px;
 
       .text_main {
-        margin-bottom: 4rem;
+        margin-top: 60px;
+        margin-bottom: 40px;
         font-weight: 700;
-        font-size: 2.2rem;
-        line-height: 2.8rem;
+        font-size: 20px;
+        line-height: 130%;
       }
 
       .text_sub {
         font-weight: 500;
-        font-size: 1.4rem;
-        line-height: 2.1rem;
+        font-size: 14px;
+        line-height: 130%;
       }
     }
   }
 
   .section_2 {
     .content {
-      padding: 8rem 0 7rem 0;
+      padding: 0 0 7rem 0;
 
       .text_main {
-        font-size: 2.2rem;
-        line-height: 2.8rem;
+        align-self: center;
+        max-width: 250px;
+        font-size: 20px;
+        line-height: 130%;
+        margin-top: 40px;
       }
 
       .statistics {
         flex-direction: column;
-        margin-top: 3.5rem;
+        margin-top: 40px;
+        align-items: center;
 
         .item {
-          margin-right: 0;
-          margin-bottom: 3rem;
+          text-align: center;
+          min-width: 15rem;
+
+          .item_name {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 130%;
+          }
 
           .item_value {
-            margin-top: 1rem;
-            font-size: 2.6rem;
-            line-height: 3.4rem;
+            margin-top: 6px;
+            margin-bottom: 32px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 130%;
+            color: #e35d3c;
           }
 
           &:last-child {
-            margin-bottom: 0;
+            margin-right: 0;
           }
         }
       }
