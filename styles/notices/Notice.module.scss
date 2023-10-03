@@ -38,12 +38,12 @@
 }
 
 @media (max-width: 767px) {
-  .section_1 {
+  .section {
     .content {
-      padding: 160px 0 0 74px;
+      padding: 113px 0 0 8px;
       flex-direction: column;
       .text_main {
-        font-size: 36px;
+        font-size: 22px;
         font-weight: 700;
         line-height: 130%;
         margin-bottom: 60px;
@@ -52,7 +52,7 @@
       }
 
       .title {
-        font-size: 24px;
+        font-size: 16px;
         font-weight: 700;
         line-height: 130%; /* 31.2px */
         margin-bottom: 6px;
@@ -60,7 +60,7 @@
 
       .date {
         color: #a5a5a5;
-        font-size: 17px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 130%; /* 22.1px */
         padding-bottom: 16px;
@@ -69,7 +69,7 @@
       }
 
       .text_content {
-        font-size: 16px;
+        font-size: 12px;
         font-weight: 400;
         line-height: 180%; /* 28.8px */
         margin-bottom: 160px;
