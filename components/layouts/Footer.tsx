@@ -10,29 +10,21 @@ const Footer: NextPage = () => {
     <Section className={styles.footer}>
       <Contents className={styles.content}>
         <div className={styles.menu}>
-          <Link href="/about" passHref>
-            회사소개
-          </Link>
-          <Link href="/notices" passHref>
-            공지사항
-          </Link>
-          <Link href="/faq" passHref>
-            자주 묻는 질문
-          </Link>
-          <Link href="/terms" passHref>
+          <Link href="/" passHref>
             이용약관
           </Link>
-          <Link href="/privacy" passHref>
+          <Link href="/" passHref>
+            전자금융거래약관
+          </Link>
+          <Link href="/" passHref>
             개인정보처리방침
           </Link>
         </div>
         <div className={styles.info_container}>
           <div className={styles.info}>
             <div className={styles.business}>
-              <div className="desktop">
-                <span className={styles.highlight} style={{ fontSize: 20 }}>
-                  (주)청년소스
-                </span>
+              <div className={styles.company}>
+                <span className={styles.highlight}>(주)청년소스</span>
                 경기도 안산시 상록구 한양대학로 55 SW창업실2
               </div>
 
@@ -41,7 +33,7 @@ const Footer: NextPage = () => {
                 <span>사업자등록번호</span>
                 <span>통신판매업신고</span>
               </div>
-              <div className="desktop">
+              <div>
                 <span>최승현</span>
                 <span>2021-경기안산-0036-대부중개</span>
                 <span> 안산시 상생경제과(031-481-2842)</span>
