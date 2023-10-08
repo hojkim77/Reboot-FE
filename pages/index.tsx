@@ -11,10 +11,11 @@ import { useOnScreen } from "@hooks/responsive";
 import { useEffect, useRef, useState } from "react";
 import FixedBar from "@/components/home/FixedBar";
 import Footer from "@/components/layouts/Footer";
+import MailModal from "@/components/modal/mailModal";
 const Home: NextPage = ({}) => {
   const ctaRef = useRef<HTMLDivElement>(null);
   const ctaOnScreen = useOnScreen(ctaRef);
-
+  const [openModal, setOpenModal] = useState<boolean>(false);
   return (
     <Container>
       <Header></Header>
@@ -35,7 +36,14 @@ const Home: NextPage = ({}) => {
                 <br />
                 쉽고 맛있는 레시피로 조리해보세요!
               </div>
-              <div className={styles.btn_compare} ref={ctaRef}>
+              <div
+                className={styles.btn_compare}
+                ref={ctaRef}
+                onClick={() => {
+                  setOpenModal(true);
+                  console.log(openModal);
+                }} //* modal창 열기
+              >
                 <SmartStoreBtn text="청년소스몰 바로가기" />
               </div>
             </div>
@@ -150,6 +158,9 @@ const Home: NextPage = ({}) => {
         </Section>
         {/** fixedBar */}
         <FixedBar trigger={ctaOnScreen === false}></FixedBar>
+        {openModal && (
+          <MailModal openModal={openModal} setOpenModal={setOpenModal} />
+        )}
       </Main>
       <Footer />
     </Container>
