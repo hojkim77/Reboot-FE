@@ -25,11 +25,18 @@
     }
   }
   .content_3 {
-    height: 724px;
     margin-top: 80px;
-    .banner {
-      height: 300px;
-      width: 1080px;
+    flex-direction: column;
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .card_wrap {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 }

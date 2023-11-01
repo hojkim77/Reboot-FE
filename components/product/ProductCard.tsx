@@ -7,17 +7,19 @@ interface Props {
   image?: string;
   title: string;
   price: string;
+  mb?: number;
 }
 
 const ProductCard: NextPage<Props> = ({
   image,
   title,
   price,
+  mb,
   ...otherProps
 }) => {
   return (
     <>
-      <div className={styles.card_wrap}>
+      <div className={styles.card_wrap} style={{ marginBottom: mb }}>
         <object data="/images/card_1.svg" />
 
         <div className={styles.title}>{title}</div>
