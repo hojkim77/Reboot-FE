@@ -1,4 +1,4 @@
-import type { AppProps } from "next/app";
+import type { AppProps } from 'next/app';
 
 function RebootAPP({ Component, pageProps }: AppProps) {
   return (
@@ -20,6 +20,7 @@ function RebootAPP({ Component, pageProps }: AppProps) {
             margin: 0;
             width: 100%;
             overflow-x: clip;
+            font-family: Pretendard;
           }
         `}
       </style>

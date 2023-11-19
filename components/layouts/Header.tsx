@@ -1,11 +1,11 @@
-import type { NextPage } from "next";
-import classNames from "classnames";
-import Link from "next/link";
-import Image from "next/image";
-import styles from "./Header.module.scss";
-import Section from "@components/layouts/Section";
-import Contents from "@components/layouts/Contents";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import type { NextPage } from 'next';
+import classNames from 'classnames';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './Header.module.scss';
+import Section from '@components/layouts/Section';
+import Contents from '@components/layouts/Contents';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 
 export interface MenuItem {
   name: string;
@@ -19,9 +19,10 @@ interface Props {
 }
 
 const MENU: MenuItem[] = [
-  { name: "회사 소개", target: "/about" },
-  { name: "공지사항", target: "/notices" },
-  { name: "자주 묻는 질문", target: "/qna" },
+  { name: '회사 소개', target: '/about' },
+  { name: '공지사항', target: '/notices' },
+  { name: '자주 묻는 질문', target: '/qna' },
+  { name: '청년소스몰', target: '/shop' },
 ];
 
 const Header: NextPage<Props> = ({ white, menu, className }) => {
@@ -63,8 +64,8 @@ const Header: NextPage<Props> = ({ white, menu, className }) => {
         setShowBorder(true);
       }
     };
-    window.addEventListener("scroll", listener);
-    return () => window.removeEventListener("scroll", listener);
+    window.addEventListener('scroll', listener);
+    return () => window.removeEventListener('scroll', listener);
   }, []);
 
   return (

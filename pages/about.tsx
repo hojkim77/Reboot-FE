@@ -1,21 +1,21 @@
-import { useRef } from "react";
-import type { NextPage, InferGetStaticPropsType } from "next";
-import Head from "next/head";
-import fs from "fs";
-import path from "path";
-import styles from "@styles/About.module.scss";
-import Container from "@components/layouts/Container";
-import Main from "@components/layouts/Main";
-import Section from "@components/layouts/Section";
-import Contents from "@components/layouts/Contents";
-import Header from "@components/layouts/Header";
+import { useRef } from 'react';
+import type { NextPage, InferGetStaticPropsType } from 'next';
+import Head from 'next/head';
+import fs from 'fs';
+import path from 'path';
+import styles from '@styles/About.module.scss';
+import Container from '@components/layouts/Container';
+import Main from '@components/layouts/Main';
+import Section from '@components/layouts/Section';
+import Contents from '@components/layouts/Contents';
+import Header from '@components/layouts/Header';
 //import Footer from "@components/layouts/Footer";
 //import Counter from "@components/Counter";
 //import ArticleList from "@components/about/ArticleList";
-import { useOnScreen } from "@hooks/responsive";
+import { useOnScreen } from '@hooks/responsive';
 //import { Dict } from "@utils/data";
-import dayjs from "dayjs";
-import Footer from "@/components/layouts/Footer";
+import dayjs from 'dayjs';
+import Footer from '@/components/layouts/Footer';
 
 export interface Dict {
   [key: string]: any;
@@ -36,7 +36,7 @@ const About: NextPage = () => {
       <Main>
         <Section
           className={styles.section_1}
-          style={{ backgroundImage: "url(/images/bgimg.svg)" }}
+          style={{ backgroundImage: 'url(/images/bgimg.svg)' }}
         >
           <Contents className={styles.content}>
             <div className={styles.text_main}>
@@ -79,7 +79,7 @@ const About: NextPage = () => {
               </div>
             </div>
             <div className={styles.text_tiny}>
-              {dayjs(new Date()).format("YYYY년 M월")} 기준
+              {dayjs(new Date()).format('YYYY년 M월')} 기준
             </div>
           </Contents>
         </Section>

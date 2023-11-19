@@ -1,17 +1,24 @@
 .card_wrap {
   width: 255px;
   height: 314px;
-
+  .link {
+    text-decoration: none;
+    color: black;
+  }
   .image {
     width: 255px;
     height: 255px;
     border-radius: 16px;
   }
   .title {
+    text-decoration: none;
+    color: black;
     margin-top: 12px;
     font-size: 16px;
   }
   .price {
+    text-decoration: none;
+    color: black;
     margin-top: 4px;
     font-size: 20px;
     font-weight: bold;

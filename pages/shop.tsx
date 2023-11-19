@@ -1,8 +1,5 @@
-import { useRef } from 'react';
-import type { NextPage, InferGetStaticPropsType } from 'next';
+import type { NextPage } from 'next';
 import Head from 'next/head';
-import fs from 'fs';
-import path from 'path';
 import styles from '@styles/Shop.module.scss';
 import Container from '@components/layouts/Container';
 import Main from '@components/layouts/Main';
