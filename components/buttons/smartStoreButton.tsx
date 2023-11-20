@@ -23,8 +23,13 @@ const SmartStoreBtn: NextPage<Props> = ({
 
   return (
     <>
-      <div style={{ width: width }} className={newClassName} {...otherProps}>
-        <button onClick={onClick}>{text}</button>
+      <div
+        onClick={onClick}
+        style={{ width: width }}
+        className={newClassName}
+        {...otherProps}
+      >
+        <button>{text}</button>
         {isArrow && (
           <object
             data="/images/arrow_right_large.svg"

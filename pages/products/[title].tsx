@@ -11,6 +11,8 @@ import ProductCard from '@/components/product/ProductCard';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import SmartStoreBtn from '@/components/buttons/smartStoreButton';
+import { useState } from 'react';
+import MailModal from '@/components/modal/mailModal';
 
 export interface Dict {
   [key: string]: any;
@@ -19,6 +21,12 @@ export interface Dict {
 const Products: NextPage = () => {
   const router = useRouter();
   const { title, price } = router.query;
+
+  const [openModal, setOpenModal] = useState<boolean>(false);
+  const onClick = () => {
+    setOpenModal(true);
+    console.log(openModal);
+  };
   return (
     <Container>
       <Head>
@@ -60,6 +68,7 @@ const Products: NextPage = () => {
                   무료배송
                 </span>
               </div>
+
               <div className={styles.discription}>
                 신선한 파, 마늘, 양파 등의 채소와 건강한 양념을 사용하여 만든
                 <br />
@@ -67,11 +76,20 @@ const Products: NextPage = () => {
                 <br />
                 시설에서 믿을 수 있는 방법으로 만들었습니다.
               </div>
+
               <SmartStoreBtn
+                onClick={onClick}
                 className={styles.button}
                 isArrow={false}
                 text="구매하기"
               />
+              {openModal && (
+                <MailModal
+                  productName={title}
+                  openModal={openModal}
+                  setOpenModal={setOpenModal}
+                />
+              )}
             </div>
           </Contents>
         </Section>

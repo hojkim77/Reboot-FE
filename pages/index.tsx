@@ -16,7 +16,7 @@ import Link from 'next/link';
 const Home: NextPage = ({}) => {
   const ctaRef = useRef<HTMLDivElement>(null);
   const ctaOnScreen = useOnScreen(ctaRef);
-  const [openModal, setOpenModal] = useState<boolean>(false);
+
   return (
     <Container>
       <Header></Header>
@@ -158,9 +158,6 @@ const Home: NextPage = ({}) => {
         </Section>
         {/** fixedBar */}
         <FixedBar trigger={ctaOnScreen === false}></FixedBar>
-        {openModal && (
-          <MailModal openModal={openModal} setOpenModal={setOpenModal} />
-        )}
       </Main>
       <Footer />
     </Container>
