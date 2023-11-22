@@ -83,8 +83,8 @@
   .img_landing_2 {
     //? 오른쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
     .img_item {
-      width: 537px;
-      height: 434px;
+      width: 477px;
+      height: 354px;
     }
     width: min-content;
     align-self: center;
@@ -112,8 +112,8 @@
     flex-direction: column;
     margin-top: 55px;
     .img_item {
-      width: 359px;
-      height: 359px;
+      width: 208px;
+      height: 243px;
     }
     .text {
       margin-top: 20px;
@@ -145,6 +145,10 @@
 
   .img_landing_4 {
     margin-top: 144px;
+    .img_item {
+      width: 440px;
+      height: 288px;
+    }
   }
 }
 
@@ -166,8 +170,8 @@
   .img_landing_5 {
     //? 왼쪽 텍스트가 밀려서 width를 줄어야했음. (왜 밀리는지 ?)
     .img_item {
-      width: 433px;
-      height: 369px;
+      width: 359px;
+      height: 305px;
     }
     align-self: center;
   }

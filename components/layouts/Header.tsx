@@ -46,11 +46,13 @@ const Header: NextPage<Props> = ({ white, menu, className }) => {
     () =>
       menu
         ? menu.map((x, i) => (
-            <div key={i} className={styles.menu_item}>
+            <>
               <Link href={x.target} passHref className={styles.menu_item_text}>
-                {x.name}
+                <div key={i} className={styles.menu_item}>
+                  {x.name}
+                </div>
               </Link>
-            </div>
+            </>
           ))
         : [],
     [menu]

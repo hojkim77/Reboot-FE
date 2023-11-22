@@ -37,15 +37,16 @@ const Home: NextPage = ({}) => {
                 <br />
                 쉽고 맛있는 레시피로 조리해보세요!
               </div>
-              <div className={styles.btn_compare} ref={ctaRef}>
-                <Link href="/shop">
+
+              <Link href="/shop">
+                <div className={styles.btn_compare} ref={ctaRef}>
                   <SmartStoreBtn
                     width={311}
                     isArrow={true}
                     text="청년소스몰 바로가기"
                   />
-                </Link>
-              </div>
+                </div>
+              </Link>
             </div>
 
             <div className={styles.img_landing_1}>
