@@ -39,18 +39,18 @@ const Shop: NextPage = () => {
           <Contents className={styles.content_3}>
             <div className={styles.title}>청년소스가 직접 만든 소스</div>
             <div className={styles.card_wrap}>
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
-              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" mb={40} />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
+              <ProductCard title="맛있는 떡볶이 소스" price="13,200~" />
             </div>
           </Contents>
         </Section>

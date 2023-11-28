@@ -8,19 +8,17 @@ interface Props {
   image?: string;
   title: string;
   price: string;
-  mb?: number;
 }
 
 const ProductCard: NextPage<Props> = ({
   image,
   title,
   price,
-  mb,
   ...otherProps
 }) => {
   return (
     <>
-      <div className={styles.card_wrap} style={{ marginBottom: mb }}>
+      <div className={styles.card_wrap}>
         <Link
           href={{
             pathname: '/products/[title]',

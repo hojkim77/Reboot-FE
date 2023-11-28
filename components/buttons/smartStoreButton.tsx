@@ -7,7 +7,7 @@ import Image from 'next/image';
 interface Props {
   className?: string;
   text: string;
-  width?: number;
+  width?: number | string;
   isArrow?: boolean;
   onClick?: () => void;
 }

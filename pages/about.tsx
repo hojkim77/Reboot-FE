@@ -83,12 +83,6 @@ const About: NextPage = () => {
             </div>
           </Contents>
         </Section>
-
-        <Section className={styles.section_3}>
-          <Contents className={styles.content}>
-            <div></div>
-          </Contents>
-        </Section>
       </Main>
       <Footer />
     </Container>

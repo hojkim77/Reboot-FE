@@ -78,6 +78,7 @@ const Products: NextPage = () => {
               </div>
 
               <SmartStoreBtn
+                width={'100%'}
                 onClick={onClick}
                 className={styles.button}
                 isArrow={false}
@@ -99,7 +100,7 @@ const Products: NextPage = () => {
         <Section>
           <Contents className={styles.content_2}>
             <div className={styles.detail}>
-              <object data="/images/detail_1.svg" />
+              <object data="/images/detail_1.svg" width="100%" />
             </div>
           </Contents>
         </Section>

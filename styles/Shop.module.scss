@@ -2,6 +2,7 @@
   align-items: center;
   flex-direction: column;
   margin-top: 80px;
+  margin-bottom: 80px;
   .content_1 {
     height: 300px;
     margin-top: 40px;
@@ -43,22 +44,46 @@
 
 @media (max-width: 767px) {
   .section_1 {
+    align-items: center;
+    flex-direction: column;
     margin-top: 72px;
-    .content {
-      height: 350px;
-
-      .text_main {
-        margin-top: 60px;
-        margin-bottom: 40px;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 130%;
+    .content_1 {
+      height: 128px;
+      width: 100%;
+      margin-top: 19px;
+      .banner {
+        background-color: gray;
+        height: 128px;
+        width: 100%;
       }
-
-      .text_sub {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 130%;
+    }
+    .content_2 {
+      height: auto;
+      margin-top: 41px;
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .card_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+    .content_3 {
+      margin-top: 80px;
+      flex-direction: column;
+      .title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 0px;
+      }
+      .card_wrap {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
   }

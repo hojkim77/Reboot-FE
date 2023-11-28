@@ -1,6 +1,8 @@
 .card_wrap {
   width: 255px;
   height: 314px;
+  margin-bottom: 40px;
+
   .link {
     text-decoration: none;
     color: black;
@@ -25,9 +27,32 @@
   }
 }
 @media (max-width: 767px) {
-  .button {
-    .Link {
-      font-size: 16px;
+  .card_wrap {
+    width: 160px;
+    height: 203px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    .link {
+      text-decoration: none;
+      color: black;
+    }
+    .image {
+      width: 160px;
+      height: 160px;
+      border-radius: 16px;
+    }
+    .title {
+      text-decoration: none;
+      color: black;
+      margin-top: 8px;
+      font-size: 12px;
+    }
+    .price {
+      text-decoration: none;
+      color: black;
+      margin-top: 4px;
+      font-size: 14px;
+      font-weight: bold;
     }
   }
 }

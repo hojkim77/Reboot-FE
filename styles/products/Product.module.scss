@@ -63,26 +63,81 @@
 .content_2 {
   margin-top: 20px;
   justify-content: center;
+  .detail {
+    width: 100%;
+  }
 }
 @media (max-width: 767px) {
   .section_1 {
+    align-items: center;
+    flex-direction: column;
     margin-top: 72px;
-    .content {
-      height: 350px;
-
-      .text_main {
-        margin-top: 60px;
-        margin-bottom: 40px;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 130%;
+    height: 681px;
+    .content_1 {
+      display: flex;
+      flex-direction: column;
+      height: 593px;
+      margin-top: 16px;
+      .image {
+        height: 343px;
+        width: 343px;
       }
-
-      .text_sub {
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 130%;
+      .info_wrap {
+        margin-top: 20px;
+        margin-left: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        .title_wrap {
+          .title {
+            display: flex;
+            flex-direction: column;
+            font-size: 16px;
+          }
+          .price {
+            text-decoration: none;
+            color: black;
+            margin-top: 0px;
+            font-size: 20px;
+            font-weight: bold;
+          }
+        }
+        .tag_wrap {
+          margin-top: 20px;
+          .rounded_box {
+            padding: 8px 16px 8px 16px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: bold;
+          }
+        }
+        .discription {
+          margin-top: 40px;
+          font-size: 14px;
+        }
+        .button {
+          margin-top: 30px;
+          cursor: pointer;
+        }
       }
+    }
+  }
+
+  .division_line {
+    background-color: #fafafa;
+    margin-top: 30px;
+    text-align: center;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+  }
+
+  .content_2 {
+    margin-top: 20px;
+    justify-content: center;
+    .detail {
+      width: 343;
     }
   }
 }
