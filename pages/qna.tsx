@@ -30,7 +30,7 @@ const Qna: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>청년소스 공지사항</title>
+        <title>청년소스 자주묻는질문</title>
       </Head>
 
       <Header></Header>

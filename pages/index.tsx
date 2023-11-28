@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import Head from 'next/head';
 import styles from '@styles/Home.module.scss';
 import Container from '@components/layouts/Container';
 import Main from '@/components/layouts/Main';
@@ -19,6 +20,9 @@ const Home: NextPage = ({}) => {
 
   return (
     <Container>
+      <Head>
+        <title>청년소스</title>
+      </Head>
       <Header></Header>
 
       <Main className={styles.main}>
