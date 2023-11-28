@@ -1,7 +1,7 @@
-import type { NextPage } from "next";
-import classNames from "classnames";
-import styles from "./Container.module.scss";
-import { ReactNode } from "react";
+import type { NextPage } from 'next';
+import classNames from 'classnames';
+import styles from './Container.module.scss';
+import { ReactNode } from 'react';
 
 interface Props {
   className?: string;

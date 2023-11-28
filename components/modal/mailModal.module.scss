@@ -14,7 +14,8 @@
 .content {
   overflow: scroll;
   width: 714px;
-  height: 60%;
+  height: auto;
+  max-height: 60%;
   padding: 36px;
   border-radius: 16px;
   background-color: white;

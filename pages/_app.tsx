@@ -1,4 +1,5 @@
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 function RebootAPP({ Component, pageProps }: AppProps) {
   return (

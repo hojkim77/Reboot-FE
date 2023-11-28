@@ -63,19 +63,19 @@ const About: NextPage = () => {
             <div className={styles.statistics} ref={statisticsRef}>
               <div className={styles.item}>
                 <div className={styles.item_name}>제휴 납품업체</div>
-                <div className={styles.item_value}>개</div>
+                <div className={styles.item_value}>0개</div>
               </div>
               <div className={styles.item}>
                 <div className={styles.item_name}>누적 판매건수</div>
-                <div className={styles.item_value}>회</div>
+                <div className={styles.item_value}>0회</div>
               </div>
               <div className={styles.item}>
                 <div className={styles.item_name}>누적 판매액수</div>
-                <div className={styles.item_value}>억 원</div>
+                <div className={styles.item_value}>0억 원</div>
               </div>
               <div className={styles.item}>
                 <div className={styles.item_name}>누적 방문자</div>
-                <div className={styles.item_value}>명</div>
+                <div className={styles.item_value}>0명</div>
               </div>
             </div>
             <div className={styles.text_tiny}>

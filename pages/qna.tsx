@@ -1,17 +1,17 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-import Head from "next/head";
-import { useEffect, useMemo } from "react";
-import styles from "@styles/Qna.module.scss";
-import Container from "@components/layouts/Container";
-import Main from "@components/layouts/Main";
-import Section from "@components/layouts/Section";
-import Contents from "@components/layouts/Contents";
-import Header from "@components/layouts/Header";
-import NoticeList from "@components/notices/NoticeList";
-import _notices from "data/qna.json";
-import Footer from "@/components/layouts/Footer";
-import QnaList from "@/components/qna/QnaList";
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import Head from 'next/head';
+import { useEffect, useMemo } from 'react';
+import styles from '@styles/Qna.module.scss';
+import Container from '@components/layouts/Container';
+import Main from '@components/layouts/Main';
+import Section from '@components/layouts/Section';
+import Contents from '@components/layouts/Contents';
+import Header from '@components/layouts/Header';
+import NoticeList from '@components/notices/NoticeList';
+import _notices from 'data/qna.json';
+import Footer from '@/components/layouts/Footer';
+import QnaList from '@/components/qna/QnaList';
 const Qna: NextPage = () => {
   //const [showOverlay, hideOverlay] = useOverlay();
   //const { data, error } = useSWR("/service/get_notice_list", fetcher);
@@ -30,7 +30,7 @@ const Qna: NextPage = () => {
   return (
     <Container>
       <Head>
-        <title>로니즈 공지사항</title>
+        <title>청년소스 공지사항</title>
       </Head>
 
       <Header></Header>

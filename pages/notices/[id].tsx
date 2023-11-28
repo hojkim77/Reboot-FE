@@ -1,16 +1,16 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-import Head from "next/head";
-import { useEffect, useMemo } from "react";
-import styles from "@styles/notices/Notice.module.scss";
-import Container from "@components/layouts/Container";
-import Main from "@components/layouts/Main";
-import Section from "@components/layouts/Section";
-import Contents from "@components/layouts/Contents";
-import Header from "@components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
-import _notices from "data/notice.json";
-import { useRouter } from "next/router";
+import type { NextPage } from 'next';
+import Link from 'next/link';
+import Head from 'next/head';
+import { useEffect, useMemo } from 'react';
+import styles from '@styles/notices/Notice.module.scss';
+import Container from '@components/layouts/Container';
+import Main from '@components/layouts/Main';
+import Section from '@components/layouts/Section';
+import Contents from '@components/layouts/Contents';
+import Header from '@components/layouts/Header';
+import Footer from '@/components/layouts/Footer';
+import _notices from 'data/notice.json';
+import { useRouter } from 'next/router';
 
 interface props {
   data: number;
@@ -19,11 +19,11 @@ interface props {
 const Notices: NextPage = () => {
   const router = useRouter();
   const { id, title, created_datetime, content } = router.query;
-  console.log("title >>>", title);
+  console.log('title >>>', title);
   return (
     <Container>
       <Head>
-        <title>로니즈 공지사항</title>
+        <title>청년소스 공지사항</title>
       </Head>
 
       <Header></Header>
