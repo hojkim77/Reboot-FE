@@ -69,10 +69,10 @@ const Home: NextPage = ({}) => {
             </div>
             <div>
               <div className={styles.text_main}>
-                크림떡볶이, 크림파스타, 크림우동
+                모츠나베, 부대찌개, 크림파스타
                 <br />
                 <span style={{ color: '#E35D3C' }}>쉽고 다양하게</span>
-                요리가 가능해요
+                활용이 가능해요
               </div>
               <div className={styles.text_sub}>
                 패밀리 레스토랑, 셀프바, 분식집, 포차, 비스트로 등
@@ -93,9 +93,9 @@ const Home: NextPage = ({}) => {
                 <span style={{ color: '#E35D3C' }}>빠른 조리</span>가 가능해요
               </div>
               <div className={styles.text_sub}>
-                불필요한 금액을 줄여 비용을 낮추는
+                여러 재료 없이 파우더만 넣으면
                 <br />
-                가장 합리적인 제작 방법을만나보세요!
+                음식이 완성되어 조리시간이 단축돼요
               </div>
             </div>
 
@@ -137,9 +137,9 @@ const Home: NextPage = ({}) => {
           <Contents className={styles.content}>
             <div>
               <div className={styles.text_main}>
-                1인용부터 단체 음식까지
+                1인 상권부터 대학 상권까지
                 <br />
-                <span style={{ color: '#E35D3C' }}>인원수에 맞게</span> 양
+                <span style={{ color: '#E35D3C' }}>인원 수에 맞는</span> 양
                 조절이 가능해요
               </div>
               <div className={styles.text_sub}>
